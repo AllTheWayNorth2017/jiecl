@@ -1,0 +1,114 @@
+.box {
+	position: relative;
+	width: 980px;
+	height: 600px;
+	margin: 0 auto;
+}
+.line {
+	width: 100%;
+    height: 2px;
+    background-color: #f1f1f1;
+    margin-top: 28px;
+}
+.zhuce {
+	width: 100%;
+    height: 50px;
+    float: left;
+    margin-top: -30px;
+    background: url(../img/login/t2.png) top center no-repeat;
+}
+.container {
+	width: 100%;
+	height: 600px;
+    text-align: center;
+    margin-top: 40px;
+}
+form {
+    height: 500px;
+    width: 980px;
+}
+p {
+    color: #F66495;
+}
+.user {
+    height: 50px;
+    width: 880px;
+}
+.user label {
+    float: left;    
+    clear: both;    
+}
+.text {
+    height: 50px;
+    width:  400px;
+    color: #a5a5a5;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    line-height: 50px;
+    font-size:  20px;
+}
+.msg {
+    display: none;
+    font-size: 15px;
+    line-height: 50px;
+}
+.pwd {
+    width: 980px;
+    height: 50px;
+}
+.pwd label {
+    float: left;    
+    clear: both;    
+}
+
+.yanzhengma {
+    position: relative;
+    width: 50px;
+    height: 80px;
+}
+.yanzhengma label {
+    float: left;
+}
+.yzm {
+    position: relative;
+    margin: 10px 0 0 0;
+    width: 150px;
+    height: 50px;
+}
+.yanzheng {
+    position: absolute;
+    top: 25px;
+    left: 200px;
+    width: 75px;
+    height: 25px;
+    background-color: #222;
+    float: left;
+}
+.btn {
+    height: 50px;
+    width:  400px;    
+}
+.submit-btn {
+    float: left;
+    height: 38px;
+    width: 184PX;
+    border: 1px solid #0381AA;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #00A7DE;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.in {
+    color: #555;
+    display: inline-block;
+    height: 36px;
+    width: 184px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin: 10px 0 0 27px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
