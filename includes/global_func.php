@@ -108,14 +108,24 @@ function _location($_info,$_url){
 	}
 	
 }
+/*********/
 
+function _login_state(){
+	if(isset($_COOKIE['username'])){
+		_alert_back('登录状态无法进行本操作！');
+	}
+}
 
 /******/
 
 function _session_destory(){
 	session_destroy();
 }
-
-
+/******/
+function _unsetcookies(){
+	setcookie('username','');
+	_session_destory();
+	_location('已成功退出','index.php');
+}
 
 ?>

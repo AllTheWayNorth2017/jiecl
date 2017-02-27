@@ -8,7 +8,8 @@ define('IN_TG', true);
 //引入公共文件
 require dirname(__FILE__).'/includes/common_inc.php';
 //转成硬路径，速度更快
-
+//登录状态
+_login_state();
 
 
 //判断是否提交了

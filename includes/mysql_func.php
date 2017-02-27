@@ -1,8 +1,18 @@
 <?php
+/**
+* TestGuest Version1.0
+* ================================================
+* Copy 2010-2012 yc60
+* Web: http://www.yc60.com
+* ================================================
+* Author: Lee
+* Date: 2010-8-19
+*/
 //防止恶意调用
 if (!defined('IN_TG')) {
 	exit('Access Defined!');
 }
+
 
 /**
  * _connect() 连接MYSQL数据库
@@ -117,6 +127,12 @@ function _close() {
 		exit('关闭异常');
 	}
 }
+
+
+
+
+
+
 
 
 ?>

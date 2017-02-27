@@ -8,7 +8,8 @@ define('IN_TG', true);
 //引入公共文件
 require dirname(__FILE__).'/includes/common_inc.php';
 //转成硬路径，速度更快
-
+//登录状态
+_login_state();
 //开始处理登录状态
 if($_GET['action']=='login'){
 	//为了防止恶意注册，跨站攻击
