@@ -2,94 +2,21 @@
 
 //管理员实体类
 class Manage{
-	private $_tpl;
+
 	private $id;
 	private $admin_user;
 	private $admin_psd;
 	private $level;
-	//构造方法，初始化
-	public function __construct(&$_tpl){
-		$this->_tpl=$_tpl;
-		$this->Action();
+	//拦截器(__set)
+	public function __set($_key,$_value){
+		$this->$_key=$_value;
 	}
 
-
-	//业务流程控制器
-
-	private function Action(){
-		//创建数据库连接
-		_connect(); 
-		//选择一款数据库
-		_select_db();
-		//选择字符集
-		_set_names();
-		switch($_GET['action']){
-			case'list':
-				$this->_tpl->assign('list',true);
-				$this->_tpl->assign('title','管理员列表');
-				$this->_tpl->assign('AllManage',$this->getManage());
-				break;
-			case'add':
-				if($_POST['send']=='新增管理员'){
-					$this->admin_user=$_POST['admin_user'];
-					$this->admin_psd=sha1($_POST['admin_psd']);
-					$this->level=$_POST['level'];
-					
-					if($this->addManage()){
-				
-						Tool::alertLocation('恭喜你新增成功','manage.php?action=list');
-
-					}else{
-					
-						Tool::alertBack('很遗憾，新增失败！');
-					}
-				}
-				$this->_tpl->assign('add',true);
-				$this->_tpl->assign('title','新增管理员');
-				break;
-			case'delete':
-				
-				if(isset($_GET['id'])){
-					$this->id=$_GET['id'];
-					$this->deleteManage() ? Tool::alertLocation('恭喜你，删除成功！','manage.php?action=list') : Tool::alertBack('很遗憾删除失败');
-
-					
-				}else{
-					Tool::alertBack('非法操作！');
-				}
-				break;
-			case'update':
-				if(isset($_POST['send'])){
-					if($_POST['admin_psd'] ==''){
-						Tool::alertBack('密码不能为空！');
-					}else{
-						$this->id=$_POST['id'];
-						$this->admin_psd=sha1($_POST['admin_psd']);
-						$this->level=$_POST['level'];
-						$this->updateManage() ? Tool::alertLocation('恭喜你，修改成功','manage.php?action=list') : Tool::alertBack('很遗憾，修改失败');
-					}
-				}
-				if(isset($_GET['id'])){
-					$this->id=$_GET['id'];
-					is_object($this->getOneManage()) ? true : Tool::alertBack('管理员的传值有误！');
-					$this->_tpl->assign('id',$this->getOneManage()->id);
-					$this->_tpl->assign('level',$this->getOneManage()->level);
-					$this->_tpl->assign('admin_user',$this->getOneManage()->admin_user);
-					$this->_tpl->assign('update',true);
-					$this->_tpl->assign('title','修改管理员');
-				}else{
-					Tool::alertBack('非法操作！');
-				}
-				
-				break;
-			default:
-				echo '非法操作';
-
-		}
-		//载入tpl文件	
-		$this->_tpl->display('manage.tpl');
-		
+	//拦截器(__get)
+	public function __get($_key){
+		return $this->$_key;
 	}
+
 	//查询单个管理员
 	public function getOneManage(){
 		//创建数据库连接
@@ -122,6 +49,10 @@ class Manage{
 		
 		return $_html;
 	}
+
+
+
+	
 	//新增管理员
 	public function addManage(){
 		//创建数据库连接
@@ -168,6 +99,12 @@ class Manage{
 		_query($_sql);
 		return _affected_rows();
 	}
+	
+
+
+
+
+
 }
 
 ?>
