@@ -35,21 +35,20 @@ class Manage{
 					$this->admin_psd=sha1($_POST['admin_psd']);
 					$this->level=$_POST['level'];
 					
-					if($this->addManage($_admin_user,$_admin_psd,$_level)==1){
+					if($this->addManage()){
 				
-						//Tool::alertLocation('恭喜你新增成功','manage.php?action=list');
+						Tool::alertLocation('恭喜你新增成功','manage.php?action=list');
 
 					}else{
 					
 						Tool::alertBack('很遗憾，新增失败！');
-				}
+					}
 				}
 				$this->_tpl->assign('add',true);
 				$this->_tpl->assign('title','新增管理员');
 				break;
 			case'delete':
-				//$this->_tpl->assign('delete',true);
-				//$this->_tpl->assign('title','删除管理员');
+				
 				if(isset($_GET['id'])){
 					$this->id=$_GET['id'];
 					$this->deleteManage() ? Tool::alertLocation('恭喜你，删除成功！','manage.php?action=list') : Tool::alertBack('很遗憾删除失败');
@@ -138,9 +137,9 @@ class Manage{
 		}else{
 			_alert_back('该用户名已存在！');
 		}
-		if(_affected_rows()){
-			echo '删除成功';
-		}
+		return _affected_rows();
+	
+		
 	
 
 		
