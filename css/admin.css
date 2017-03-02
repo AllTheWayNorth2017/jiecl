@@ -93,10 +93,10 @@ body{
 #main table th, #main table td{
 	height: 30px;
 	line-height: 30px;
-	color: #333;
+	color: red;
 }
 #main table th{
-	background:#eef3f7;
+	background:black;
 	border-bottom: 1px solid #d5dfe8;
 	font-weight: normal;
 }
