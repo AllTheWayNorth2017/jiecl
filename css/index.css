@@ -59,6 +59,10 @@
     height: 50px;
     float: left;
 }
+.menu-home:hover {
+    color: #00a1d6;
+    cursor: pointer;
+}
 .menu-home i {
     position: relative;
     top: -1px;
@@ -80,6 +84,10 @@
     padding-right: 12.4px;
     width: 50px;
     height: 50px;
+}
+.menu-animation:hover {
+    color: #00a1d6; 
+    cursor: pointer;
 }
 .num {
     position: relative;
@@ -112,6 +120,10 @@
     width: 64px;
     height: 50px;
 }
+.menu-square:hover {
+    color: #00a1d6; 
+    cursor: pointer;
+}
 .menu-square  i {
     position: relative;
     top: 3px;
@@ -137,6 +149,10 @@
     margin: 0 12px 0 18px;
     width: 64px;
     height: 50px;
+}
+.menu-live:hover {
+    color: #00a1d6; 
+    cursor: pointer;   
 }
 .menu-live  i {
     position: relative;
@@ -210,6 +226,9 @@
     border-radius: 4px;
     background-color: rgba(255, 255, 255, .88);
 }
+.search-form:hover {
+    background-color: #fff;
+}
 .keyword {
     float: left;
     width: 200px;
@@ -234,6 +253,9 @@
     height: 32px;
     cursor: pointer;
     background: url(../img/icon/icons.png) -653px -720px no-repeat;
+}
+.search-submit:hover {
+    background-position: -718px -720px;
 }
 .suggest {
     position: absolute;
@@ -267,6 +289,7 @@
     width: 68px;
     line-height: 32px;
     border-radius: 4px;
+    cursor: pointer;
     background-color: rgba(255, 255, 255, .88);
 }
 .rank span {
@@ -275,6 +298,9 @@
     color: #f25d8e;
     background: url(../img/icon/icons.png) -659px  -655px no-repeat;
     font-size: 12px;
+}
+.rank:hover {
+    background-color: #fff;
 }
 
 /*以上内容是菜单*/
@@ -374,17 +400,17 @@
 }
 .lunbo-r-list {
     position: relative;
+    margin-left: 20px;
     height: 240px;
     overflow: hidden;
-    margin-left: 20px;
 }
 .lb-r-ul {
     margin-right: -20px;
 }
 .lb-r-ul li {
     float: left;
-    width: 180px;
     margin-bottom: 20px;
+    width: 180px;
 }
 .v-item {
     position: relative;
@@ -398,14 +424,13 @@
     border-radius: 4px;
 }
 .preview img {
+    margin: 0 auto;
     height: 100%;
-    margin: 0 auto;   
 }
 .page {
     display: none;
     position: absolute;
-    background-color: rgba(0,0,0,0.6);
-    background-image: url(../img/icon/icons2.png);
+    background-color: rgba( 0, 0, 0, .6);
     background-repeat: no-repeat;
     width: 20px;
     top: 50%;
@@ -415,6 +440,7 @@
     color: #fff;
     z-index: 99;
     text-align: center;
+    background-image: url(../img/icon/icons2.png);
 }
 .lb-yesterday {
     left: 0;
@@ -430,7 +456,7 @@
 }
 .lunbo-r-list:hover .page{
     display: block;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba( 0, 0, 0, .7);
     transition: .2s all linear;
 }
 /*下面新作推广*/
@@ -463,12 +489,12 @@
     position: absolute;
     left: 0;
     top: -8px;
-    background: url(../img/icon/icons.png) -141px -75px no-repeat;
+    display: inline-block;
+    margin-right: 10px;
     width: 40px;
     height: 39px;
-    display: inline-block;
     vertical-align: middle;
-    margin-right: 10px;
+    background: url(../img/icon/icons.png) -141px -75px no-repeat;
 }
 .b-head-t {
     margin-left: 46px;
@@ -580,10 +606,10 @@
     -webkit-mask-image: -webkit-radial-gradient(circle,white,black);
 }
 .tg-com img {
-    width: 100%;
-    height: 100%;
     display: block;
     margin: 0 auto;
+    width: 100%;
+    height: 100%;
     outline: 0;
 }
 .index-online {
@@ -639,8 +665,8 @@
 }
 .tg-ad {
     position: relative;
-    margin: 0px auto 10px;
     top: -10px;
+    margin: 0px auto 10px;
     overflow: hidden;
     width: 1160px;
     height: 96px;
@@ -698,12 +724,19 @@
     line-height: 24px;
     font-weight: normal;
 }
+.fanju-l-head h2:hover {
+    color: #00a1d6;
+    cursor: pointer;
+}
 .fj-list {
+    float: left;
     position: relative;
     margin-left: 20px;
-    float: left;
     display: inline-block;
     vertical-align: middle;
+}
+.fj-list li span:hover {
+    color: #00a1d6;
 }
 .fj-list li {
     float: left;
@@ -762,6 +795,14 @@
     height: 13px;
     vertical-align: top;
     margin-top: 5px;
+    transition: .2s;
+}
+.refresh:hover {
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); /* Internet Explorer */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); /* Opera */
 }
 .info {
     display: inline-block;
@@ -776,28 +817,28 @@
     background-color: #ccd0d7;
 }
 .fj-xinfan {
-    margin: 3px 0 0 40px;
-    overflow: hidden;
     float: left;
     display: inline-block;
+    margin: 3px 0 0 40px;
+    overflow: hidden;
     vertical-align: bottom;
 }
 .fj-xinfan i {
     display: inline-block;
+    margin-top: 1px;
     vertical-align: top;
     background: url(../img/icon/icons.png) -665px -1113px no-repeat;
     width: 14px;
     height: 14px;
-    margin-top: 1px;
 }
 .xinfan {
-    vertical-align: top;
-    height: auto;
     padding: 0 0 0 8px;
     margin: -15px 0 0 15px;
+    height: auto;
     line-height: 16px;
     color: #6d757a;
     cursor: pointer;
+    vertical-align: top;
 }
 .xinfan:hover {
     color: #00a1d6;
@@ -819,10 +860,10 @@
     font-size: 12px;
 }
 .fj-a {
-    width: 160px;
-    height: 100px;
     display: block;
     overflow: hidden;
+    width: 160px;
+    height: 100px;
     text-align: center;
     transition: .2s all linear;
     box-sizing: border-box;
@@ -840,9 +881,9 @@
     pointer-events: none;
 }
 .fj-a img {
+    margin: 0 auto;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
 }
 .fj-words {
     overflow: hidden;
@@ -865,25 +906,25 @@
     display: inline-block;
     float: left;
     overflow: hidden;
-    color: #99a2aa;
     width: 80px;
     height: 14px;
+    color: #99a2aa;
     white-space: nowrap;
     vertical-align: top;
     text-overflow: ellipsis;
     line-height: 12px;
 }
 .fj-play {
+    display: inline-block;
     vertical-align: top;
     margin-right: 5px;
-    display: inline-block;
     width: 12px;
     height: 12px;
     background: url(../img/icon/icons.png) -282px -90px  no-repeat;
 }
 .fj-mulu {
-    margin-right: 5px;
     display: inline-block;
+    margin-right: 5px;
     vertical-align: top;
     width: 12px;
     height: 12px;
@@ -962,23 +1003,26 @@
     border-radius: 4px;
 }   
 .fj-rank1 img {
+    margin: 0 auto;
     max-width: 80px;
     height: 50px;
-    margin: 0 auto;
 }
 .fj-rank1 a {
     float: left;
 }
 .fj-rank11 {
-    height: 36px;
-    line-height: 18px;
-    margin-top: -3px;
-    width: 150px;
     padding: 0;
+    margin-top: -3px;
+    height: 36px;
+    width: 150px;
+    line-height: 18px;
     word-wrap: break-word;
     word-break: break-all;
     overflow: hidden;
     color: #222;
+}
+.fj-rank11:hover {
+    color: #00a1d6; 
 }
 .fj-rank12 {
     margin-top: 5px;
@@ -1000,6 +1044,10 @@
     word-break: break-all;
     overflow: hidden;
     color: #222;
+    transition: .1s;
+}
+.fj-rank-com:hover {
+    color: #00a1d6;
 }
 .fj-more-link {
     text-align: right;
@@ -1008,14 +1056,18 @@
 }
 .fj-more-link a {
     display: block;
+    border: 1px solid #e0e6ed;
     width: auto;
+    height: 22px;
     background-color: #e5e9ef;
     text-align: center;
-    border: 1px solid #e0e6ed;
-    height: 22px;
     line-height: 22px;
     color: #222;
     border-radius: 4px;
+    transition: .2s;
+}
+.fj-more-link a:hover {
+    background-color: #ccd0d7;
 }
 .fj-more-link a i {
     position: absolute;
@@ -1027,9 +1079,9 @@
 }
 /*下面是最新*/
 .zuixin {
-        margin: 10px auto 0 auto;
-        width: 1160px;
-        height: 406px;
+    margin: 10px auto 0 auto;
+    width: 1160px;
+    height: 406px;
 }
 .zx-l {
     width: 880px;
@@ -1066,6 +1118,9 @@
     height: 36px;
     line-height: 36px;
     margin-right: 130px;
+}
+.zx-w {
+    cursor: pointer;
 }
 .zx-w0 {
     position: relative;
@@ -1139,12 +1194,12 @@
     width: 180px;
 }
 .zx-item a {
-    width: 72px;
-    height: 72px;
-    margin-right: 12px;
+    position: relative;
     display: block;
     float: left;
-    position: relative;
+    margin-right: 12px;
+    width: 72px;
+    height: 72px;
     overflow: hidden;
     border-radius: 4px;
 }
@@ -1164,10 +1219,11 @@
     float: left;
     width: 96px;
     height: 72px;
-}
-.zx-item-i {
     color: inherit;
     text-align: left;
+}
+.zx-item-i a .zx-t:hover {
+    color: #00a1d6;
 }
 .zx-t {
     color: #222;
@@ -1191,11 +1247,11 @@
     line-height: 18px;
 }
 .zx-num span {
+    display: inline-block;
     overflow: hidden;
     margin-left: 5px;
     border-radius: 9px;
     padding: 0 4px;
-    display: inline-block;
     vertical-align: top;
     text-align: center;
     height: 18px;
@@ -1210,10 +1266,10 @@
     background: #b8c0cc;
 }
 .zx-r {
-    height: 360px;
     float: right;
-    width: 260px;
     margin-bottom: 50px;
+    height: 360px;
+    width: 260px;
 }
 .zx-r-b {
     clear: both;
@@ -1299,13 +1355,16 @@
 }
 .gp-list3 {
     display: block;
+    overflow: hidden;
     margin-top: -16px;
     width: 56px;
     height: 40px;
     line-height: 20px;
-    overflow: hidden;
     color: #222;
     word-wrap: break-word;
+}
+.gp-list3:hover {
+    color: #00a1d6;
 }
 /*下面是游戏*/
 #yx-icon {
@@ -1327,10 +1386,9 @@
     background: url(../img/icon/icons.png) -137px -970px no-repeat;
 }
 
-
 /*下面是侧条*/
 .nav {
-     position: fixed;
+    position: fixed;
     left: 50%;
     top: 50%;
     margin: 110px 0 0 614px;
@@ -1367,28 +1425,33 @@
     cursor: pointer;
 }
 .fenlei a {
-    color: #222;
     display: block;
     height: 32px;
     width: 48px;
+    color: #222;
 }
 .current {
     background-color: #00a1d6;
 }
 .fenlei a:hover {
     background-color: #00a1d6;
+    color: #fff;
 }
 
 .paixu {
     padding: 8px 0;
     border-top: 1px solid #e5e9ef;
 }
+.paixu:hover {
+    color: #fff;
+    background-color: #00a1d6;
+}
 .paixu i {
     display: block;
     margin: 0 auto 4px;
-    background: url(../img/icon/icons.png) -663px -151px no-repeat;
     height: 18px;
     width: 18px;
+    background: url(../img/icon/icons.png) -663px -151px no-repeat;
 }
 .lianjie {
     border-left: 1px solid #ddd;
@@ -1399,19 +1462,19 @@
     background-color: #f6f9fa;
 }
 .btn-gotop {
-    height: 48px;
-    background: #f6f9fa url(../img/icon/icons.png) -648px -72px no-repeat;
     border: 1px solid #e5e9ef;
     overflow: hidden;
+    height: 48px;
     border-radius: 4px;
     cursor: pointer;
+    background: #f6f9fa url(../img/icon/icons.png) -648px -72px no-repeat;
 }
 .mlink {
     position: relative;
     margin-left: -15px;
+    border: 0;
     height: 80px;
     width: 80px;
-    border: 0;
     cursor: pointer;
     background: url(../img/others/tubiao.png) 0 0 no-repeat;
 }
